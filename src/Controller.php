@@ -2,7 +2,7 @@
 
 namespace app\stash;
 
-use infuse\Model;
+use Infuse\Model;
 use Stash\Pool;
 
 class Controller

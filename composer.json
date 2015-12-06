@@ -16,7 +16,7 @@
 		"source": "https://github.com/infusephp/stash"
 	},
     "autoload": {
-        "psr-4": {"app\\stash\\": "src/"}
+        "psr-4": {"App\\Stash\\": "src/"}
     },
     "repositories": [
         {

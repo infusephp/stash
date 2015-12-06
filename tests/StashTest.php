@@ -1,8 +1,8 @@
 <?php
 
-use app\stash\Controller;
+use App\Stash\Controller;
 
-class StashTest extends \PHPUnit_Framework_TestCase
+class StashTest extends PHPUnit_Framework_TestCase
 {
     public function testStash()
     {
@@ -15,8 +15,8 @@ class StashTest extends \PHPUnit_Framework_TestCase
         $controller->middleware($app['req'], $app['res']);
 
         $stash = $app['stash'];
-        $this->assertInstanceOf('\\Stash\\Pool', $stash);
+        $this->assertInstanceOf('Stash\Pool', $stash);
         $this->assertEquals('namespace', $stash->getNamespace());
-        $this->assertInstanceOf('\\Stash\\Driver\\Ephemeral', $app['stash_driver']);
+        $this->assertInstanceOf('Stash\Driver\Ephemeral', $app['stash_driver']);
     }
 }

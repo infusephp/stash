@@ -1,6 +1,6 @@
 <?php
 
-namespace app\stash;
+namespace App\Stash;
 
 use Stash\Pool;
 

@@ -2,7 +2,6 @@
 
 namespace app\stash;
 
-use Infuse\Model;
 use Stash\Pool;
 
 class Controller
@@ -16,7 +15,7 @@ class Controller
         $this->app['stash_driver'] = function () use ($config) {
             $driverClass = $config->get('cache.driver');
             if (!$driverClass) {
-                $driverClass = '\\Stash\\Driver\\Ephemeral';
+                $driverClass = 'Stash\Driver\Ephemeral';
             }
 
             $driver = new $driverClass();
@@ -32,7 +31,5 @@ class Controller
 
             return $pool;
         };
-
-		Model::setDefaultCache($this->app['stash']);
 	}
 }

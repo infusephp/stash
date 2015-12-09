@@ -18,15 +18,9 @@
     "autoload": {
         "psr-4": {"App\\Stash\\": "src/"}
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/jaredtking/Stash"
-        }
-    ],
 	"require": {
 		"php": ">=5.4.0",
-		"tedivm/stash": "dev-predis_driver"
+		"tedivm/stash": "0.13.1"
 	},
 	"require-dev": {
 		"infuse/bootstrap": "~1.1",

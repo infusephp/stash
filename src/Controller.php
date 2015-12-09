@@ -6,20 +6,20 @@ use Stash\Pool;
 
 class Controller
 {
-	use \InjectApp;
+    use \InjectApp;
 
-	function middleware($req, $res)
-	{
-		$config = $this->app['config'];
-		
+    public function middleware($req, $res)
+    {
+        $config = $this->app['config'];
+
         $this->app['stash_driver'] = function () use ($config) {
             $driverClass = $config->get('cache.driver');
             if (!$driverClass) {
                 $driverClass = 'Stash\Driver\Ephemeral';
             }
 
-            $driver = new $driverClass();
-            $driver->setOptions((array) $config->get('cache.options'));
+            $opts = (array) $config->get('cache.options');
+            $driver = new $driverClass($opts);
 
             return $driver;
         };
@@ -31,5 +31,5 @@ class Controller
 
             return $pool;
         };
-	}
+    }
 }

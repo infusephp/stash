@@ -1,18 +1,16 @@
 <?php
 
-use App\Stash\Controller;
-
 class StashTest extends PHPUnit_Framework_TestCase
 {
     public function testStash()
     {
         $app = new App([
+            'services' => [
+                'stash' => 'App\Stash\Stash',
+                'stash_driver' => 'App\Stash\StashDriver',
+            ],
             'cache' => [
-                'namespace' => 'namespace']]);
-
-        $controller = new Controller;
-        $controller->injectApp($app);
-        $controller->middleware($app['req'], $app['res']);
+                'namespace' => 'namespace', ], ]);
 
         $stash = $app['stash'];
         $this->assertInstanceOf('Stash\Pool', $stash);

@@ -23,7 +23,7 @@
 		"tedivm/stash": "v0.13.1"
 	},
 	"require-dev": {
-		"infuse/bootstrap": "~1.1",
+		"infuse/infuse": "dev-master",
 		"satooshi/php-coveralls": "0.6.1"
 	}
 }

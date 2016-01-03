@@ -1,10 +1,12 @@
 <?php
 
+use Infuse\Application;
+
 class StashTest extends PHPUnit_Framework_TestCase
 {
     public function testStash()
     {
-        $app = new App([
+        $app = new Application([
             'services' => [
                 'stash' => 'App\Stash\Stash',
                 'stash_driver' => 'App\Stash\StashDriver',

@@ -38,8 +38,8 @@ Add the services to your app's configuration:
 ```php
 'services' => [
 	// ...
-	'stash' => 'App\Stash\Stash',
-	'stash_driver' => 'App\Stash\StashDriver'
+	'stash' => 'Infuse\Stash\Stash',
+	'stash_driver' => 'Infuse\Stash\StashDriver'
 	// ...
 ]
 ```

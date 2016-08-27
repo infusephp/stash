@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Stash;
+namespace Infuse\Stash;
 
 class StashDriver
 {

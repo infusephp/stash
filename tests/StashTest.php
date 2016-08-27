@@ -8,8 +8,8 @@ class StashTest extends PHPUnit_Framework_TestCase
     {
         $app = new Application([
             'services' => [
-                'stash' => 'App\Stash\Stash',
-                'stash_driver' => 'App\Stash\StashDriver',
+                'stash' => 'Infuse\Stash\Stash',
+                'stash_driver' => 'Infuse\Stash\StashDriver',
             ],
             'cache' => [
                 'namespace' => 'namespace', ], ]);
